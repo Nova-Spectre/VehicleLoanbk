@@ -24,6 +24,12 @@ public class UserDetails {
 	String password;
 	boolean status;
 	
+	public boolean isStatus() {
+		return status;
+	}
+	public void setStatus(boolean status) {
+		this.status = status;
+	}
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name="fk_user_id",referencedColumnName = "u_id")
 	private List<Vehicle> vehicle;
@@ -103,7 +109,8 @@ public class UserDetails {
 	public String toString() {
 		return "UserDetails [u_id=" + u_id + ", u_name=" + u_name + ", u_email=" + u_email + ", mob_no=" + mob_no
 				+ ", gender=" + gender + ", age=" + age + ", city=" + city + ", State=" + State + ", pincode=" + pincode
-				+ ", address=" + address + ", password=" + password + ", vehicle=" + vehicle + "]";
+				+ ", address=" + address + ", password=" + password + ", status=" + status + ", vehicle=" + vehicle
+				+ "]";
 	}
 	
 	

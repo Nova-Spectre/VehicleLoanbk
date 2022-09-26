@@ -29,17 +29,21 @@ public class UserDetailsController {
 	public UserDetails getById(@PathVariable("u_id") int u_id) throws NoUserFoundException {
 		return uService.findUserDetailsById(u_id);
 	}
-	@PostMapping("/userdetails")
+	@PostMapping("/user")
 	public UserDetails addUserDetails(@RequestBody UserDetails u){
 		return uService.createUserDetails(u);
 	}
 	
-	@PutMapping("/userdetails/{id}")
+	@PutMapping("/user/{id}")
 		public UserDetails modifyUserDetails(@PathVariable("id") int id,@RequestBody UserDetails u) throws NoUserFoundException {
 		return uService.updateUserDetailsById(id, u);
 	}
-	@DeleteMapping("/userdetails/{u_id}")
+	@DeleteMapping("/user/{u_id}")
 	public UserDetails removeUserDetails(@PathVariable("u_id") int u_id) throws NoUserFoundException {
 		return uService.deleteUserDetailsById(u_id);
 	}
+//	@GetMapping("/user/approve")
+//	public List<UserDetails> getapproveList(){
+//		return uService.getApprovedlist();
+//	}
 }

@@ -26,6 +26,7 @@ public class VehicleServiceImpl implements VehicleService {
 	}
 
 	@Override
+	@Transactional
 	public Vehicle findVehiclebyId(int vid) throws NoVehicleFoundException {
 		// TODO Auto-generated method stub
 		Optional<Vehicle> vfind = vRepo.findById(vid);

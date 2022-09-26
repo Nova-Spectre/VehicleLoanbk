@@ -17,5 +17,7 @@ public interface UserService {
 	public UserDetails updateUserDetailsById(int u_id,UserDetails u) throws NoUserFoundException;
 	
 	public UserDetails deleteUserDetailsById(int u_id) throws NoUserFoundException;
+	
+//	public List<UserDetails> getApprovedlist();
 
 }

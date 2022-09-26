@@ -44,6 +44,7 @@ public class LoanServiceImpl implements LoanService {
 	}
 
 	@Override
+	@Transactional
 	public Loan updateLoanbyId(int loanno, Loan l) throws NoLoandetailsFound {
 		// TODO Auto-generated method stub
 		Optional<Loan> vfind = lRepo.findById(loanno);

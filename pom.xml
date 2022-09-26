@@ -42,7 +42,7 @@
             <artifactId>ojdbc</artifactId>
             <version>6</version>
             <scope>system</scope>
-            <systemPath>D:\Software and jar\ojdbc6\ojdbc6.jar</systemPath>
+            <systemPath>C:\jdbc\ojdbc6.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
