@@ -13,4 +13,6 @@ import com.lti.entity.UserDetails;
 public interface LoanRepository extends JpaRepository<Loan, Integer> {
 	
 	
+	
+	
 }

@@ -42,8 +42,18 @@ public class UserDetailsController {
 	public UserDetails removeUserDetails(@PathVariable("u_id") int u_id) throws NoUserFoundException {
 		return uService.deleteUserDetailsById(u_id);
 	}
-//	@GetMapping("/user/approve")
-//	public List<UserDetails> getapproveList(){
-//		return uService.getApprovedlist();
-//	}
+	@GetMapping("/user/status/{status}")
+	public List<UserDetails> getUserbyStatus(@PathVariable("status") String status){
+		return uService.getApprovedlist(status);
+	}
+	
+	@GetMapping("/user/countbyid/{u_id}")
+	public long getCountbyuid(@PathVariable("u_id") int u_id){
+		return uService.countByu_id(u_id);
+	}
+	
+	@GetMapping("/user/countbyname/{uname}")
+	public long getCountbyuname(@PathVariable("uname") String uname){
+		return uService.countByName(uname);
+	}
 }

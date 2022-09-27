@@ -74,10 +74,22 @@ public class UserServiceImpl implements UserService {
 		return null;
 	}
 
-//	@Override
-//	public List<UserDetails> getApprovedlist() {
-//		// TODO Auto-generated method stub
-//		return uRepo.getapprovedList();
-//	}
+	@Override
+	public List<UserDetails> getApprovedlist(String status) {
+		// TODO Auto-generated method stub
+		return uRepo.getapprovedList(status);
+	}
+
+	@Override
+	public long countByu_id(int u_id) {
+		// TODO Auto-generated method stub
+		return uRepo.countByu_id(u_id);
+	}
+
+	@Override
+	public long countByName(String uname) {
+		// TODO Auto-generated method stub
+		return uRepo.countByName(uname);
+	}
 
 }

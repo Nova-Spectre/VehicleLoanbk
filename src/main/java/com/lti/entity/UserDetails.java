@@ -22,14 +22,9 @@ public class UserDetails {
 	int pincode;
 	String address;
 	String password;
-	boolean status;
+	String status;
 	
-	public boolean isStatus() {
-		return status;
-	}
-	public void setStatus(boolean status) {
-		this.status = status;
-	}
+	
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name="fk_user_id",referencedColumnName = "u_id")
 	private List<Vehicle> vehicle;
@@ -105,6 +100,12 @@ public class UserDetails {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
 	@Override
 	public String toString() {
 		return "UserDetails [u_id=" + u_id + ", u_name=" + u_name + ", u_email=" + u_email + ", mob_no=" + mob_no
@@ -112,7 +113,7 @@ public class UserDetails {
 				+ ", address=" + address + ", password=" + password + ", status=" + status + ", vehicle=" + vehicle
 				+ "]";
 	}
-	
+
 	
 
 }
