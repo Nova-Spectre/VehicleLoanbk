@@ -82,4 +82,10 @@ public class VehicleServiceImpl implements VehicleService {
 		return vRepo.findAll();
 	}
 
+//	@Override
+//	public List<Vehicle> getvehiclestatus(String status) {
+//		// TODO Auto-generated method stub
+//		return vRepo.getApprovedVehicle(status);
+//	}
+
 }

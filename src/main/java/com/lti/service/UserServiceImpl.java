@@ -92,4 +92,10 @@ public class UserServiceImpl implements UserService {
 		return uRepo.countByName(uname);
 	}
 
+//	@Override
+//	public UserDetails findByu_name(String u_name) {
+//		// TODO Auto-generated method stub
+//		return uRepo.findByu_name(u_name);
+//	}
+
 }

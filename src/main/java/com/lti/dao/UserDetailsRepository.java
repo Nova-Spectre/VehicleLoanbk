@@ -17,6 +17,9 @@ public interface UserDetailsRepository extends JpaRepository<UserDetails, Intege
 	
 	@Query("SELECT COUNT(u) FROM UserDetails u WHERE u.u_name=?1")
 	long countByName(String uname);
+	
+
+	
 
 	
 

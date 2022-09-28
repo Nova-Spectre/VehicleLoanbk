@@ -22,5 +22,6 @@ public interface UserService {
 	public long countByu_id(int u_id);
 
 	public long countByName(String uname);
+//	public UserDetails findByu_name(String u_name);
 
 }

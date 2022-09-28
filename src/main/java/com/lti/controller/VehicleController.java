@@ -5,13 +5,13 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import org.springframework.web.bind.annotation.RestController;
-
+import com.lti.entity.UserDetails;
 import com.lti.entity.Vehicle;
 import com.lti.exception.NoVehicleFoundException;
 import com.lti.service.VehicleService;
 
 @RestController
+@CrossOrigin("http://localhost:4200")
 public class VehicleController {
 	@Autowired
 	private VehicleService vser;
@@ -44,6 +44,10 @@ public class VehicleController {
 		return vser.deleteVehiclebyId(vid);
 	}
 	
+//	@GetMapping("/vehicle/status/{status}")
+//	public List<Vehicle> getVehiclebyStatus(@PathVariable("status") String status){
+//		return vser.getvehiclestatus(status);
+//	}
 	
 	
 	

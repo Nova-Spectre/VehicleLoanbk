@@ -12,6 +12,7 @@ public interface VehicleService {
 	public Vehicle updateVehiclebyId(int vid,Vehicle v) throws NoVehicleFoundException;
 	public Vehicle deleteVehiclebyId(int vid) throws NoVehicleFoundException;
 	public List<Vehicle> allVehiclesList();
+//	public List<Vehicle> getvehiclestatus(String status);
 	
 
 }

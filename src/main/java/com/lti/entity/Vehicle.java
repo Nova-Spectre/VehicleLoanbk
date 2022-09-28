@@ -22,8 +22,8 @@ public class Vehicle {
 	
 	private String vname;
 	private String vmodel;
-	private String showroomprice;
-	private String onroadprice;
+	private int showroomprice;
+	private int onroadprice;
 	private long aadharcardno;
 	private String pancardno;
 	private boolean photo;
@@ -52,16 +52,16 @@ public class Vehicle {
 	public void setVmodel(String vmodel) {
 		this.vmodel = vmodel;
 	}
-	public String getShowroomprice() {
+	public int getShowroomprice() {
 		return showroomprice;
 	}
-	public void setShowroomprice(String showroomprice) {
+	public void setShowroomprice(int showroomprice) {
 		this.showroomprice = showroomprice;
 	}
-	public String getOnroadprice() {
+	public int getOnroadprice() {
 		return onroadprice;
 	}
-	public void setOnroadprice(String onroadprice) {
+	public void setOnroadprice(int onroadprice) {
 		this.onroadprice = onroadprice;
 	}
 	public long getAadharcardno() {
